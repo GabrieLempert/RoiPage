@@ -2,3 +2,6 @@ credentials.json
 scripts/credintials.json
 
 node_modules/
+
+.DS_Store
+```
