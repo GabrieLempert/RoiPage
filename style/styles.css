@@ -50,7 +50,7 @@ body {
 
 .circle-image {
     position: relative;
-    left: -10%;
+    left: -9%;
     width: var(--circle-size) ;/* Use custom property for width */
     height: var(--circle-size); /* Use custom property for height */
     background-color: black;
@@ -58,6 +58,11 @@ body {
     background-position: left center; /* Image positioned on the left */
     border-radius: 50%; /* Ensure the image is circular */
 }
+
+
+
+
+
 
 @media screen and (max-width: 600px) {
     .navbar {

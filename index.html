@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Nav Bar</title>
-    <link rel="stylesheet" href="style/styles.css"> <!-- Link to external CSS file -->
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/styles.css"> <!-- Link to your custom CSS file -->
 </head>
 <body>
 
@@ -14,11 +16,37 @@
     </div>
 </div>
 
-<div class="bottom-center-container">
-    <div class="circle-image"></div>
-
+<div class="bottom-center-container container-fluid">
+    <div class="circle-image row"></div>
+    
+    <div class="contact-form container-md">
+        <form action="send-email.php" method="post"> <!-- Replace with your server-side script -->
+            <div class="form-group row">
+                <div class="col-3">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+                </div>  
+            </div>
+            
+            
+            <div class="form-group row">
+                <div class="col-3">
+                <label for="phone">Phone:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <div class="col-3">
+                <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
 
+<!-- Link to Bootstrap JavaScript (Optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
