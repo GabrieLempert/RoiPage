@@ -52,7 +52,7 @@ app.post('/',async (req, res) => {
     const sheet = doc.sheetsByIndex[0];
     await sheet.addRow({Name:name,PhoneNumber:phone});
     //read rows from spreadsheet
-    res.send('success');
+    res.redirect('/?message=Your request was sent successfully!');
 });
 
 
