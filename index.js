@@ -14,6 +14,7 @@ const { GoogleSpreadsheet } = require('google-spreadsheet');
 const app = express();
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
+const port = process.env.PORT || 3000;
 
 
 
@@ -55,7 +56,7 @@ app.post('/',async (req, res) => {
 });
 
 
-app.listen(process.env.PORT,() => {
-    console.log(`Example app listening on port ${process.env.PORT}!`);
+app.listen(port,() => {
+    console.log(`Example app listening on port ${port}!`);
 });
 
