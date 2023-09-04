@@ -38,7 +38,7 @@ app.get('/',async (req, res) => {
 });
 app.post('/',async (req, res) => {
     const {name,phone} = req.body;
-    const spreadsheetId = '1Pua7Qa8pTm-5l2GXHHJVoOpkS2ny7u-AIGSzxTU1yTA';
+    const spreadsheetId = process.env.SPREAD_SHEET_ID;
     //create a google autn client for service account   
     const auth = new JWT({
         email: process.env.CLIENT_EMAIL,
