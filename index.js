@@ -20,20 +20,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/',async (req, res) => {
-    //create a google autn client for service account
-    const auth = new JWT({
-        email: process.env.CLIENT_EMAIL,
-        key: process.env.PRIVATE_KEY.replace(/\\n/g, '\n'),
-        scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-    });
     res.render('index');
-
-
-    /* const doc = new GoogleSpreadsheet(spreadsheetId, auth);
-    await doc.loadInfo();
-    console.log(doc.sheetsByIndex[0]); */
-    
-
 });
 app.post('/',async (req, res) => {
     const {name,phone} = req.body;
